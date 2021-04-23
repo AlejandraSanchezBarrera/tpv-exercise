@@ -3,6 +3,18 @@ package oop.inheritance.ingenico;
 import java.util.Properties;
 
 public class IngenicoStorageSystem {
+    private static IngenicoStorageSystem uniqueInstance;
+
+    private IngenicoStorageSystem(){
+
+    }
+
+    public static IngenicoStorageSystem getInstance(){
+        if(uniqueInstance==null){
+            uniqueInstance = new IngenicoStorageSystem();
+        }
+        return uniqueInstance;
+    }
 
     private Properties properties = new Properties();
 

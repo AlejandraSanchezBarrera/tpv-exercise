@@ -1,6 +1,18 @@
 package oop.inheritance.verifone.v240m;
 
 public class VerifoneV240mEthernet {
+    private static VerifoneV240mEthernet uniqueInstance;
+
+    private VerifoneV240mEthernet(){
+
+    }
+
+    public static VerifoneV240mEthernet getInstance(){
+        if(uniqueInstance==null){
+            uniqueInstance = new VerifoneV240mEthernet();
+        }
+        return uniqueInstance;
+    }
 
     /**
      * Opens a connection using the ethernet device

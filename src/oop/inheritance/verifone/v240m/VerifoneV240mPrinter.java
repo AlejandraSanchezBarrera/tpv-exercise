@@ -1,7 +1,18 @@
 package oop.inheritance.verifone.v240m;
 
 public class VerifoneV240mPrinter {
+    private static VerifoneV240mPrinter uniqueInstance;
 
+    private VerifoneV240mPrinter(){
+
+    }
+
+    public static VerifoneV240mPrinter getInstance(){
+        if(uniqueInstance==null){
+            uniqueInstance = new VerifoneV240mPrinter();
+        }
+        return uniqueInstance;
+    }
     /**
      * Prints a message on the current line at the specified horizontal position
      *

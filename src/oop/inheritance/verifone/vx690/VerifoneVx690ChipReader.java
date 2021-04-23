@@ -5,6 +5,18 @@ import oop.inheritance.data.EntryMode;
 import oop.inheritance.data.ExpirationDate;
 
 public class VerifoneVx690ChipReader {
+    private static VerifoneVx690ChipReader uniqueInstance;
+
+    private VerifoneVx690ChipReader(){
+
+    }
+
+    public static VerifoneVx690ChipReader getInstance(){
+        if(uniqueInstance==null){
+            uniqueInstance = new VerifoneVx690ChipReader();
+        }
+        return uniqueInstance;
+    }
 
     public Card readCard() {
         return Card.builder()

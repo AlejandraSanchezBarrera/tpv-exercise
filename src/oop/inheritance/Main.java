@@ -1,6 +1,7 @@
 package oop.inheritance;
 
 import oop.inheritance.data.SupportedTerminal;
+import oop.inheritance.ingenico.IngenicoDisplay;
 
 public class Main {
 

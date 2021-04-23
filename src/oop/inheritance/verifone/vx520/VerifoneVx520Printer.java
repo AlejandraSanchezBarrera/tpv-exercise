@@ -1,7 +1,18 @@
 package oop.inheritance.verifone.vx520;
 
 public class VerifoneVx520Printer {
+    private static VerifoneVx520Printer uniqueInstance;
 
+    private VerifoneVx520Printer(){
+
+    }
+
+    public static VerifoneVx520Printer getInstance(){
+        if(uniqueInstance==null){
+            uniqueInstance = new VerifoneVx520Printer();
+        }
+        return uniqueInstance;
+    }
     /**
      * Prints a message on the current line at the specified horizontal position
      *

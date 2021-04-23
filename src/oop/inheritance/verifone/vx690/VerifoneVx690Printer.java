@@ -1,7 +1,18 @@
 package oop.inheritance.verifone.vx690;
 
 public class VerifoneVx690Printer {
+    private static VerifoneVx690Printer uniqueInstance;
 
+    private VerifoneVx690Printer(){
+
+    }
+
+    public static VerifoneVx690Printer getInstance(){
+        if(uniqueInstance==null){
+            uniqueInstance = new VerifoneVx690Printer();
+        }
+        return uniqueInstance;
+    }
     /**
      * Prints a message on the current line at the specified horizontal position
      *
